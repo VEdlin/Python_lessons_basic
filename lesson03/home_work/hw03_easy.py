@@ -5,7 +5,7 @@
 # Для решения задачи не используйте встроенные функции и функции из модуля math.
 
 def my_round(number, ndigits):
-    pass
+    return float('{x:.{y}f}'.format(x=number, y=ndigits))
 
 
 print(my_round(2.1234567, 5))
@@ -20,8 +20,10 @@ print(my_round(2.9999967, 5))
 # !!!P.S.: функция не должна НИЧЕГО print'ить
 
 def lucky_ticket(ticket_number):
-    pass
-
+    if (sum(int(i) for i in ticket[:3])) == (sum(int(i) for ticket in x[3:])):
+        return 'You\'ve WON!'
+    else:
+        return 'You LOOSE!'
 
 print(lucky_ticket(123006))
 print(lucky_ticket(12321))
