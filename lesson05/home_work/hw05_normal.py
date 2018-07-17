@@ -13,3 +13,26 @@
 # Для решения данной задачи используйте алгоритмы из задания easy,
 # оформленные в виде соответствующих функций,
 # и импортированные в данный файл из easy.py
+
+def main_loop():
+    import les05_easy_norm as umodule
+    main_start = True
+    print('Добро пожаловать в домашнюю работу!')
+    while main_start == True:
+        x = str(input('Выберите задание:\n\
+1 - Перейти в папку\n\
+2 - Посмотреть содержимое текущей папки\n\
+3 - Удалить папку\n\
+4 - Создать папку\n\
+5 - exit\n'))
+        if x == '1':
+            umodule.goto_path()
+        elif x == '2':
+            umodule.current_dir()
+        elif x == '3':
+            umodule.remove_dir()
+        elif x == '4':
+            umodule.create_dir()
+        else:
+            print('Good bye')
+            main_start = False
